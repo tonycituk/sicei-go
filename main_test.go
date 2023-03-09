@@ -7,7 +7,6 @@ import (
     "testing"
     "github.com/gin-gonic/gin"
     "github.com/stretchr/testify/assert"
-	"fmt"
 )
 
 func SetUpRouter() *gin.Engine{
