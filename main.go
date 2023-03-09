@@ -6,13 +6,13 @@ import (
   "github.com/gin-gonic/gin"
 )
 
-type student struct {
+type Student struct {
     Nombre string  `json:"nombre"`
     Matricula  string  `json:"matricula"`
 }
 
 // students slice
-var students = []student{
+var students = []Student{
     {Nombre: "Manuel Antonio Cituk Martínez", Matricula: "20216392"},
     {Nombre: "Julian Chan Palomo", Matricula: "20216390"},
     {Nombre: "Jorge Teodoro Dawn Rodríguez", Matricula: "17000972"},
