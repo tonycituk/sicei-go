@@ -14,7 +14,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'docker images'
+                sh 'docker stop sicei-go-container'
+                sh 'docker rm sicei-go-container'
+                sh 'docker run --detach --name sicei-go-container -p 80:80 sicei-go-main:0.0.$BUILD_ID'
             }
         }
     }
