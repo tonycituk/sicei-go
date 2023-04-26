@@ -9,12 +9,12 @@ pipeline {
         stage('Build, Package & Tag') {
             steps {
                 sh 'BRANCH=$(echo $GIT_BRANCH | cut -b 8-11)'
-                sh 'echo $BRANCH'
+                sh 'docker build -t sicei-go-$BRANCH:0.0.$BUILD_ID .'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'echo "Deploying..."'
+                sh 'docker images'
             }
         }
     }
