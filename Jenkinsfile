@@ -9,7 +9,7 @@ pipeline {
         stage('Build, Package & Tag') {
             steps {
                 sh 'export BRANCH=$(echo $GIT_BRANCH | cut -b 8-11)'
-                sh 'docker build -t sicei-go-$BRANCH:0.0.$BUILD_ID .'
+                sh 'echo $SHELL'
             }
         }
         stage('Deploy') {
